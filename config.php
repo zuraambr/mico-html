@@ -50,7 +50,7 @@ $slider_items = [
 <?php
 
 // Doctors options
-$doctors = [
+$doctorss = [
     'Dr. John Doe',
     'Dr. Jane Smith',
     'Dr. Alice Brown'
