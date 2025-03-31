@@ -17,7 +17,7 @@
             <div class="form-group col-lg-4">
               <label for="inputDoctorName">Doctor's Name</label>
               <select name="" class="form-control wide" id="inputDoctorName">
-                <?php foreach ($doctors as $doctor): ?>
+                <?php foreach ($doctorss as $doctor): ?>
                   <option value="<?php echo $doctor; ?>"><?php echo $doctor; ?></option>
                 <?php endforeach; ?>
               </select>

@@ -82,22 +82,22 @@
               <div class="d-flex mr-auto flex-column flex-lg-row align-items-center">
                 <ul class="navbar-nav  ">
                   <li class="nav-item ">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about.html"> About</a>
+                    <a class="nav-link" href="about.php"> About</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="treatment.html">Treatment</a>
+                    <a class="nav-link" href="treatment.php">Treatment</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="doctor.html">Doctors</a>
+                    <a class="nav-link" href="doctor.php">Doctors</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">Testimonial</a>
+                    <a class="nav-link" href="testimonial.php">Testimonial</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="contact.php">Contact Us</a>
                   </li>
                 </ul>
               </div>
