@@ -100,25 +100,25 @@
       <div class="row">
         <div class="col-md-7">
           <div class="form_container">
-            <form action="">
-              <div>
-                <input type="text" placeholder="Full Name" />
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" placeholder="Phone Number" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
-            </form>
+            <!-- Form starts here -->
+                        <form action="success.php" method="POST">
+                        <div>
+                            <input type="text" name="name" placeholder="Full Name" required />
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Email" required />
+                        </div>
+                        <div>
+                            <input type="text" name="phone" placeholder="Phone Number" required />
+                        </div>
+                        <div>
+                            <textarea name="message" class="message-box" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="btn_box">
+                            <button href="success.php" type="submit" >SEND</button>
+                        </div>
+                    </form>
+            <!-- Form ends here -->
           </div>
         </div>
         <div class="col-md-5">
