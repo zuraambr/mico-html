@@ -31,6 +31,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>booking</title>
 </head>
+<style>
+body {
+      background-color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+</style>
 <body>
     <h2>Appointment Summary</h2>
     <p><strong>Patient Name:</strong> <?php echo $patientName; ?></p>
