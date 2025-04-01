@@ -48,21 +48,10 @@ $slider_items = [
 
 
 <?php
-
-// Doctors options
-$doctorss = [
-    'Dr. John Doe',
-    'Dr. Jane Smith',
-    'Dr. Alice Brown'
-];
-
-// Departments options
-$departments = [
-    'Cardiology',
-    'Neurology',
-    'Pediatrics'
-];
+$doctorss = ["Dr. John Doe", "Dr. Alice Smith", "Dr. Robert Brown"];
+$departments = ["Cardiology", "Neurology", "Orthopedics", "Pediatrics"];
 ?>
+
 
 <?php
 

@@ -38,14 +38,18 @@
 </head>
 
 <body>
+<?php include 'functions.php'; ?>
 
+  
   <div class="hero_area">
 
-    <?php include 'header.php'; ?>
-    <?php include 'slider.php'; ?>
-    
-  </div>
-  <?php include 'book.php'; ?>
+  <?php setHeader($phone_number, $email, $location, $nav_links, $logo_image);
+        setSlider($slider_items);
+         ?>
+ </div>
+   <?php 
+   getBookingForm($doctorss, $departments);
+   ?>
 
   
 
@@ -81,9 +85,14 @@
 
   <!-- end about section -->
 
-  <?php include 'treatment1.php'; ?>
-  <?php include 'docteam.php'; ?>
-  <?php include 'testimonial1.php'; ?>
+  <?php getTreatmentSection($treatments);
+        getDoctorsSection($doctors);
+        getClientSection($testimonials)
+  ?>
+
+  
+  
+  
   
 
 
