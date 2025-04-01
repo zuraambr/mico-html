@@ -147,7 +147,7 @@ function getBookingForm($doctorss, $departments) {
                 </div>
                 <div class="form-group col-lg-4">
                   <label for="inputDoctorName">Doctor's Name</label>
-                  <select name="doctor_name" class="form-control wide" id="inputDoctorName">
+                  <select name="doctor_name" class="form-control wide" id="inputDoctorName" required>
                     <option value="" disabled selected>Select Doctor</option>
                     <?php if (!empty($doctorss)): ?>
                       <?php foreach ($doctorss as $doctor): ?>
@@ -160,7 +160,7 @@ function getBookingForm($doctorss, $departments) {
                 </div>
                 <div class="form-group col-lg-4">
                   <label for="inputDepartmentName">Department's Name</label>
-                  <select name="department_name" class="form-control wide" id="inputDepartmentName">
+                  <select name="department_name" class="form-control wide" id="inputDepartmentName" required> 
                     <option value="" disabled selected>Select Department</option>
                     <?php if (!empty($departments)): ?>
                       <?php foreach ($departments as $department): ?>
