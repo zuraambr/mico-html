@@ -182,9 +182,11 @@ function getBookingForm($doctorss, $departments) {
                   <input type="text" class="form-control" id="inputSymptoms" name="symptoms">
                 </div>
                 <div class="form-group col-lg-4">
-                  <label for="inputDate">Choose Date</label>
-                  <input type="date" class="form-control" id="inputDate" name="appointment_date" >
-                </div>
+                      <label for="inputDate">Choose Date</label>
+                           <input type="text" class="form-control" id="inputDate" name="appointment_date" placeholder="dd.mm.yyyy" required>
+                            </div>
+
+
               </div>
               <div class="btn-box">
                 <button type="submit" class="btn">Submit Now</button>
