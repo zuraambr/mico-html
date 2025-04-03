@@ -5,7 +5,7 @@
   
 function setHeader($phone_number, $email, $location, $nav_links, $logo_image) {
     ?>
-    <header class="header_section">
+    <header class="header_section hero_area">
         <div class="header_top">
             <div class="container">
                 <div class="contact_nav">
@@ -76,7 +76,7 @@ function setHeader($phone_number, $email, $location, $nav_links, $logo_image) {
 
 function setSlider($slider_items) {
     ?>
-    <section class="slider_section">
+    <section class="slider_section hero_area ">
       <div class="dot_design">
         <img src="images/dots.png" alt="">
       </div>
@@ -360,6 +360,215 @@ function getClientSection($testimonials) {
 
 
 
+
+<!-- about section -->
+<?php
+function about_section() {
+    ?>
+    
+    <section class="about_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="img-box">
+                        <img src="images/about-img.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="detail-box">
+                        <div class="heading_container">
+                            <h2>
+                                About <span>Hospital</span>
+                            </h2>
+                        </div>
+                        <p>
+                            has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors
+                        </p>
+                        <a href="">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end about section -->
+    <?php
+}
+?>
+
+
+<?php
+function contact_section() {
+    ?>
+    <!-- contact section -->
+    <section class="contact_section layout_padding-bottom">
+        <div class="container">
+            <div class="heading_container">
+                <h2>
+                    Get In Touch
+                </h2>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form_container">
+                        <!-- Form starts here -->
+                        <form action="success.php" method="POST">
+                            <div>
+                                <input type="text" name="name" placeholder="Full Name" required />
+                            </div>
+                            <div>
+                                <input type="email" name="email" placeholder="Email" required />
+                            </div>
+                            <div>
+                                <input type="text" name="phone" placeholder="Phone Number" required />
+                            </div>
+                            <div>
+                                <textarea name="message" class="message-box" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="btn_box">
+                                <button href="success.php" type="submit">SEND</button>
+                            </div>
+                        </form>
+                        <!-- Form ends here -->
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="img-box">
+                        <img src="images/contact-img.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end contact section -->
+    <?php
+}
+?>
+
+
+
+
+<!-- info section -->
+<?php
+function info_section($contact_info, $social_links, $useful_links, $posts) {
+    ?>
+    
+    <section class="info_section">
+        <div class="container">
+            <div class="info_top">
+                <div class="info_logo">
+                    <a href="">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="info_form">
+                    <form action="">
+                        <input type="email" placeholder="Your email">
+                        <button>
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="info_bottom layout_padding2">
+                <div class="row info_main_row">
+                    <div class="col-md-6 col-lg-3">
+                        <h5>Address</h5>
+                        <div class="info_contact">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span><?php echo $contact_info['address']; ?></span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span><?php echo $contact_info['phone']; ?></span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope"></i>
+                                <span><?php echo $contact_info['email']; ?></span>
+                            </a>
+                        </div>
+                        <div class="social_box">
+                            <a href="<?php echo $social_links['facebook']; ?>">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                            <a href="<?php echo $social_links['twitter']; ?>">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="<?php echo $social_links['linkedin']; ?>">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                            <a href="<?php echo $social_links['instagram']; ?>">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_links">
+                            <h5>Useful link</h5>
+                            <div class="info_links_menu">
+                                <?php foreach ($useful_links as $key => $link): ?>
+                                    <a href="<?php echo $link; ?>" class="<?php echo $key === 'home' ? 'active' : ''; ?>">
+                                        <?php echo ucfirst($key); ?>
+                                    </a>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_post">
+                            <h5>LATEST POSTS</h5>
+                            <?php foreach ($posts as $post): ?>
+                                <div class="post_box">
+                                    <div class="img-box">
+                                        <img src="<?php echo $post['image']; ?>" alt="">
+                                    </div>
+                                    <p><?php echo $post['title']; ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end info_section -->
+    <?php
+}
+?>
+
+
+<!-- footer section -->
+<?php
+function footer_section() {
+    ?>
+    
+    <footer class="footer_section">
+        <div class="container">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By
+                <a href="https://html.design/">Free Html Templates</a>
+            </p>
+        </div>
+    </footer>
+    <!-- footer section -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.js"></script>
+    <!-- Nice Select -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+    <!-- Owl Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Datepicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+    <?php
+}
+?>
 
 
 
